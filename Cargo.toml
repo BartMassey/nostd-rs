@@ -1,0 +1,16 @@
+[package]
+name = "nostd-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.libc]
+version = "0.2.159"
+default-features = false
+
+[profile.release]
+panic = "abort"
+lto = true
+codegen-units = 1
+
+[profile.dev]
+panic = "abort"
